@@ -7,11 +7,16 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "schema": "pnpx drizzle-kit generate:sqlite --schema=./src/db/schema.ts --out=./src/db/migrations",
+    "migrate": "pnpx wrangler d1 migrations apply cloudflare --local",
+    "migrate-prod": "pnpx wrangler d1 migrations apply cloudflare --remote",
     "db:generate": "pnpm drizzle-kit generate",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
     "pages:build": "pnpx @cloudflare/next-on-pages",
     "preview": "pnpm pages:build && wrangler pages dev",
-    "deploy": "pnpm pages:build && wrangler pages deploy"
+    "deploy": "pnpm pages:build && wrangler pages deploy",
+    "update-local-db": "pnpx wrangler d1 execute cloudflare --local",
+    "update-prod-db": "pnpx wrangler d1 execute cloudflare --remote"
   },
   "dependencies": {
     "@auth/d1-adapter": "^1.4.1",
