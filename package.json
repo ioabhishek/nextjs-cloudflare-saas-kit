@@ -7,15 +7,19 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "db:generate": "pnpm drizzle-kit generate",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
     "pages:build": "pnpx @cloudflare/next-on-pages",
     "preview": "pnpm pages:build && wrangler pages dev",
     "deploy": "pnpm pages:build && wrangler pages deploy"
   },
   "dependencies": {
+    "@auth/drizzle-adapter": "^1.4.1",
     "@cloudflare/next-on-pages": "^1.12.1",
+    "@cloudflare/workers-types": "^4.20240725.0",
     "drizzle-orm": "^0.32.1",
     "next": "14.2.5",
+    "next-auth": "5.0.0-beta.19",
     "react": "^18",
     "react-dom": "^18"
   },
