@@ -8,5 +8,5 @@ mode = "smart"
 
 [[ d1_databases ]]
 binding = "DB"
-database_name = "cloudflare"
-database_id = "bd0ee562-d2c7-4445-90b6-2b69d66021c3"
+database_name = "nextjs-cloudflare-saas-kit"
+database_id = ""
