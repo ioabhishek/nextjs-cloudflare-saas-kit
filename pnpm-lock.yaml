@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@auth/d1-adapter':
+        specifier: ^1.4.1
+        version: 1.4.1
       '@auth/drizzle-adapter':
         specifier: ^1.4.1
         version: 1.4.1
@@ -94,6 +97,9 @@ packages:
         optional: true
       nodemailer:
         optional: true
+
+  '@auth/d1-adapter@1.4.1':
+    resolution: {integrity: sha512-+2Hsp9ePboKOOnEniFH7nIDEFKW/fHUq5tVFBLMnJaiW/1fuYeNMN+y0nRewyqS8LjZ2UgWEMBkckGUEQbAkUg==}
 
   '@auth/drizzle-adapter@1.4.1':
     resolution: {integrity: sha512-pUC8D0jfANDvThH1CrcUXmjZyF98ccVMY3iEZUQzUTr0U1csuppvRoz5JccOLzjv3tu+Nb9Qd6SvrmmsnuYgSw==}
@@ -3337,6 +3343,14 @@ snapshots:
       oauth4webapi: 2.11.1
       preact: 10.11.3
       preact-render-to-string: 5.2.3(preact@10.11.3)
+
+  '@auth/d1-adapter@1.4.1':
+    dependencies:
+      '@auth/core': 0.34.1
+    transitivePeerDependencies:
+      - '@simplewebauthn/browser'
+      - '@simplewebauthn/server'
+      - nodemailer
 
   '@auth/drizzle-adapter@1.4.1':
     dependencies:
